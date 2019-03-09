@@ -44,7 +44,17 @@ public class Main {
 		//se realizara la sumatoria de las rutas con exceso y se repartiran 
 		//entre los trabajadores
 		
+		int horas = 0;
 		
+		for (int i = 0; i < n; i++) {
+			
+			if(rutasMañana[i] + rutasTarde[i] > d) {
+				horas = ((rutasMañana[i] + rutasTarde[i]) - d) + horas;
+				rutasMañana[i] = d/2;
+				rutasTarde[i] =d - rutasMañana[i];
+			}
+			
+		}
 		
 		
 		
