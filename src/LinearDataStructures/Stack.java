@@ -36,7 +36,7 @@ public class Stack {
 
 
 	/**
-	 * 
+	 * Add node at last stack
 	 * @param newNode
 	 */
 	public void push(Node newNode)
@@ -47,7 +47,7 @@ public class Stack {
 
 
 	/**
-	 * 
+	 * Take node at last stack
 	 * @return
 	 */
 	public Node pop()
@@ -61,8 +61,8 @@ public class Stack {
 
 
 	/**
-	 * 
-	 * @return
+	 * Show last Node
+	 * @return Last Node at Stack
 	 */
 	public String peek()
 	{
@@ -72,7 +72,7 @@ public class Stack {
 
 
 	/**
-	 * 
+	 * Print Stack
 	 */
 	public void printStack()
 	{

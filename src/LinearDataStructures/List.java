@@ -25,8 +25,8 @@ public class List {
 	public List() {}
 
 	/**
-	 * 
-	 * @return
+	 * This method validates if the list is empty
+	 * @return if the list is empty return true, else return false
 	 */
 	public boolean isEmpty()
 	{
@@ -35,7 +35,7 @@ public class List {
 
 
 	/**
-	 * 
+	 * This method print list
 	 */
 	public void printList()
 	{
@@ -56,8 +56,8 @@ public class List {
 
 
 	/**
-	 * 
-	 * @param newNode
+	 * This method insert a new Node at begin of the list
+	 * @param new Node 
 	 */
 	public void insertAtBegin(Node newNode)
 	{
@@ -67,8 +67,8 @@ public class List {
 
 
 	/**
-	 * 
-	 * @param newNode
+	 * This method insert a new Node at end of the list
+	 * @param new Node
 	 */
 	public void insertAtEnd(Node newNode)
 	{
@@ -86,8 +86,8 @@ public class List {
 
 
 	/**
-	 * 
-	 * @param newNode
+	 * This method insert a new Node at a specific index of the list
+	 * @param new Node
 	 * @param index
 	 */
 	public void insertAtIndex(Node newNode, int index)
@@ -103,7 +103,7 @@ public class List {
 
 
 	/**
-	 * 
+	 * This method delete the present Node at begin of the list
 	 */
 	public void deleteAtBegin()
 	{
@@ -115,7 +115,7 @@ public class List {
 
 
 	/**
-	 * 
+	 * This method delete the present Node at end of the list
 	 */
 	public void deleteAtEnd()
 	{
@@ -129,7 +129,7 @@ public class List {
 
 
 	/**
-	 * 
+	 * This method delete the present Node at a specific index of the list
 	 * @param index
 	 */
 	public void deleteAtIndex(int index)
@@ -148,9 +148,10 @@ public class List {
 
 
 	/**
-	 * 
-	 * @param oldNode
-	 * @param newNode
+	 * This method updates the existing node at first position
+	 * by the node that you enter as a parameter
+	 * @param existing node
+	 * @param new Node
 	 */
 	public void updateFirst(Node oldNode, Node newNode)
 	{
@@ -174,7 +175,8 @@ public class List {
 
 
 	/**
-	 * 
+	 * This method updates all existing nodes at list that are
+	 * equal to the node OldNode by the Node newNode.
 	 * @param oldNode
 	 * @param newNode
 	 */
@@ -203,7 +205,9 @@ public class List {
 
 
 	/**
-	 * 
+	 * This method performs a linear search in the list, 
+	 * element by element from the head, 
+	 * until finding the first match of the searched node
 	 * @param node
 	 * @return
 	 */
@@ -226,9 +230,11 @@ public class List {
 
 
 	/**
-	 * 
-	 * @param node
-	 * @return
+	 * This method performs a linear search in the list, 
+	 * element by element from the head, 
+	 * until finding all matches of the searched node
+	 * @param searched node
+	 * @return List of all matches of the searched node
 	 */
 	public List searchAll(Node node)
 	{
@@ -250,9 +256,9 @@ public class List {
 
 
 	/**
-	 * 
-	 * @param node
-	 * @return
+	 * This method performs a binary search in the list
+	 * @param searched node
+	 * @return index of the searched node
 	 */
 	public int binarySearch(Node node)
 	{
@@ -276,7 +282,7 @@ public class List {
 	}
 
 	/**
-	 * 
+	 * this method updates the list, reversing the elements of it.
 	 */
 	public void reverse()
 	{
@@ -294,9 +300,9 @@ public class List {
 
 
 	/**
-	 * 
-	 * @param unsorted
-	 * @return
+	 * This method sorts the list nodes from least to highest 
+	 * @param List unsorted
+	 * @return List sorted
 	 */
 	public List quickSort(List unsorted)
 	{

@@ -36,7 +36,7 @@ public class Queue {
 
 
 	/**
-	 * 
+	 * Add Node at last Queue
 	 * @param newNode
 	 */
 	public void enqueue(Node newNode)
@@ -53,7 +53,7 @@ public class Queue {
 		newNode.setNext(null);
 	}
 	/**
-	 * 
+	 * Take Node at start Queue
 	 * @return
 	 */
 	public Node dequeue()
@@ -64,6 +64,11 @@ public class Queue {
 
 		return  temp;
 	}
+	
+	
+	/*
+	 * Print Queue
+	 */
 	public void printQueue()
 	{
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter( System.out ));
