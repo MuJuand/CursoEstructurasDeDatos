@@ -173,9 +173,34 @@ public class SortAlgorithms {
 	 * @param unsortedArray
 	 * @return
 	 */
-	public int[] quickSort(int[] unsortedArray)
+	public void quickSort(int inicio, int fin , int[] unsortedArray)
 	{
-		return null;
+		int i = inicio;
+		int j = fin;
+		int central = unsortedArray[(inicio + fin)/2];
+		do {
+			while(central > unsortedArray[i]) {
+				i++;
+			}
+			while(central < unsortedArray[j]) {
+				j--;
+			}
+			
+			if(i<=j) {
+				int temp = unsortedArray[i];
+				unsortedArray[i] = unsortedArray[j];
+				unsortedArray[j] = temp;
+				i++;
+				j--;
+			}
+		} while (i<=j);
+		
+		if(inicio < j) {
+			quickSort(inicio,j,unsortedArray);
+		}
+		if(fin > i) {
+			quickSort(i, fin, unsortedArray);
+		}
 	}
 
 	

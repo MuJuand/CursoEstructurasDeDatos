@@ -19,10 +19,12 @@ import java.io.*;
  */
 public class List {
 
-	public Node head = null;
+	public Node head ;
 
 
-	public List() {}
+	public List() {
+		this.head = null;
+	}
 
 	/**
 	 * This method validates if the list is empty
@@ -459,10 +461,7 @@ public class List {
 		for (int i = 0; i < index-1; i++) {
 			temp=temp.getNext();
 		}
-		return temp.clone()  
-
-
-				;
+		return temp.clone();
 	}
 
 

@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
+import java.util.Vector;
 
 public class prueba {
 	
@@ -14,7 +15,7 @@ public class prueba {
 
 		try {
 			
-			FileReader fr = new FileReader(new File("src\\dataset.txt"));
+			FileReader fr = new FileReader(new File("src\\dataset3.txt"));
 			
 			BufferedReader br = new BufferedReader(fr);
 			
@@ -45,11 +46,11 @@ public class prueba {
 
 				line = br.readLine();
 			}
-			
+			System.out.println("total nodos : " + count);
 			/*
 			 * creacion conexiones
 			 */
-			FileReader fr2 = new FileReader(new File("src\\dataset.txt"));
+			FileReader fr2 = new FileReader(new File("src\\dataset3.txt"));
 			BufferedReader bf2 = new BufferedReader(fr2);
 			
 			bf2.readLine();
@@ -57,7 +58,7 @@ public class prueba {
 			bf2.readLine();
 			bf2.readLine();
 			
-			System.out.println("total nodos : " + count);
+			
 			line = bf2.readLine();
 			int count2 = 0;
 			while(line !=null ) {
@@ -67,10 +68,19 @@ public class prueba {
 				int data2 = Integer.parseInt(st.nextToken());
 				
 				graph.insertConnection(data1, data2);
-				count++;
+				count2++;
 				line = bf2.readLine();
 			}
-			System.out.println("total conexiones : " + count2);
+			
+			Vector <Integer> conecciones = graph.nodes.get(0).connections;
+			
+			for (int i = 0; i < conecciones.size(); i++) {
+				System.out.println(conecciones.get(0));
+			}
+			
+			
+			
+			
 			
 		} catch (IOException e) {
 			e.printStackTrace();
