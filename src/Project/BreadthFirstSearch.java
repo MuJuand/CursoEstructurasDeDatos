@@ -8,6 +8,15 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 
+/**
+ * 
+ * @author Juan David Guerrero Pérez
+ * 
+ * This class is the representation for the 
+ * implementation of Breadth First Search algorithm
+ * 
+ */
+
 public class BreadthFirstSearch {
 	
 	private GraphList graph;

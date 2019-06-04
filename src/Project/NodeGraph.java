@@ -7,7 +7,7 @@ import java.util.Map;
  * 
  * @author Juan David Guerrero Pérez
  * 
- * This class is the representation for a undirected Graph
+ * This class is the representation for a Nodo of a undirected Graph
  * 
  */
 

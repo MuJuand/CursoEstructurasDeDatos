@@ -1,8 +1,16 @@
 package Project;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Vector;
+
+/**
+ * 
+ * @author Juan David Guerrero Pérez
+ * 
+ * This class is the representation for the 
+ * implementation of a Nodo for a Queue that
+ * represents paths.
+ * 
+ */
 
 public class NodePath {
 	

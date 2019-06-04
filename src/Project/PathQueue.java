@@ -1,6 +1,16 @@
 package Project;
 
 
+/**
+ * 
+ * @author Juan David Guerrero Pérez
+ * 
+ * This class is the representation for the 
+ * implementation of a Queue that
+ * represents paths.
+ * 
+ */
+
 public class PathQueue {
 	
 	private NodePath head;

@@ -4,6 +4,15 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 
+ * @author Juan David Guerrero Pérez
+ * 
+ * This class is the representation for the 
+ * implementation of a undirected graph
+ * 
+ */
+
 public class GraphList {
 	
 
@@ -38,7 +47,4 @@ public class GraphList {
 		Arrays.sort(arr);
 		return arr;
 	}
-	
-	
-	
 }
