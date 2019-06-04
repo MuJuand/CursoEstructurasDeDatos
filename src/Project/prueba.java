@@ -53,7 +53,7 @@ public class prueba {
 			
 			BreadthFirstSearch bfs = new BreadthFirstSearch(graph);
 			
-			List <Integer> camino = bfs.shortestPath(0, 1);
+			List <Integer> camino = bfs.shortestPath(0, 3);
 			
 			System.out.println(Arrays.toString(camino.toArray()));
 			

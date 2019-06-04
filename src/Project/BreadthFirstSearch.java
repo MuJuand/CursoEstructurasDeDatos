@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Vector;
 
 public class BreadthFirstSearch {
 	
@@ -49,9 +50,7 @@ public class BreadthFirstSearch {
 			if(!visited(path.getLastPath())) {
 				
 				if(path.getLastPath()==destinationNode) {
-					path.addPath(destinationNode);
 					shortestPath = path.getPath();
-					System.out.println("entre camino : " + Arrays.toString(shortestPath.toArray()));
 					return shortestPath;
 					
 				}else {
@@ -59,7 +58,6 @@ public class BreadthFirstSearch {
 					Set <Integer> neighbors = graph.getNode(path.getLastPath()).getConexiones().keySet();
 					
 					for (Integer integer : neighbors) {
-						System.out.println(integer);
 						
 						if(!visited(integer)) {
 							NodePath newNode = new NodePath();
@@ -68,9 +66,8 @@ public class BreadthFirstSearch {
 							
 							tempNode.add(integer);
 
-							newNode.setPath(tempNode);
+							newNode.setPath((Vector<Integer>) tempNode);
 							paths.enqueue(newNode);
-							System.out.println("entre camino : " + Arrays.toString(newNode.getPath().toArray()));
 							newNode = null;
 							
 						}

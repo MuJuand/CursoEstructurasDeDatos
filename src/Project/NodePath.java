@@ -2,15 +2,16 @@ package Project;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 public class NodePath {
 	
-	private List <Integer> paths;
+	private Vector <Integer> paths;
 	
 	private NodePath next;
 
 	public NodePath() {
-		this.paths = new ArrayList<Integer>();
+		this.paths = new Vector<Integer>();
 		this.next = null;
 	}
 	
@@ -23,11 +24,11 @@ public class NodePath {
 		return paths.get(paths.size()-1);
 	}
 
-	public List<Integer> getPath() {	
-		return paths;
+	public Vector<Integer> getPath() {	
+		return (Vector<Integer>) paths.clone();
 	}
 
-	public void setPath(List<Integer> paths) {
+	public void setPath(Vector<Integer> paths) {
 		this.paths = paths;
 	}
 
