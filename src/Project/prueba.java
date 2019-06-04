@@ -13,15 +13,18 @@ import java.util.StringTokenizer;
  * 
  * @author Juan David Guerrero Pérez
  * 
- * MuJuanD 
+ * Implementación
  * 
  */
 
 public class prueba {
 
-	
 	public static void main(String[] args) {
 		
+		/***
+		 * Inicio cálculo temporal implementacion grafo
+		 */
+		long startTimeImplementacion = System.nanoTime();  
 		
 		GraphList graph = new GraphList();
 
@@ -31,6 +34,9 @@ public class prueba {
 			
 			BufferedReader br = new BufferedReader(fr);
 			
+			/*
+			 * saltos de lineas fútiles
+			 */
 			br.readLine();
 			br.readLine();
 			br.readLine();
@@ -40,7 +46,7 @@ public class prueba {
 		
 			int count = 0;
 			
-			/*
+			/**
 			 * creacion de nodos y conexiones
 			 */
 			while(line !=null ) {
@@ -56,26 +62,55 @@ public class prueba {
 				line = br.readLine();
 				count++;
 			}
+			/**
+			 * fin creacion de nodos y conexiones
+			 */
 			
+			
+			long estimatedTimeImplementacion = System.nanoTime() - startTimeImplementacion;
+			/***
+			 * fin cálculo temporal implementacion grafo
+			 */
+					
+			/****
+			 * Inicio cálculo temporal algoritmo BFS
+			 */
+			long startBfs = System.nanoTime(); 
 			
 			BreadthFirstSearch bfs = new BreadthFirstSearch(graph);
 			
-			List <Integer> camino = bfs.shortestPath(0, 1804539);
+			int start = 666;
 			
+			int goal = 999666;
+			
+			List <Integer> camino = bfs.shortestPath(start, goal);
+			
+			System.out.println("Camino mas corto del nodo " + start 
+					+ " al nodo " + goal + " es:\n" );
 			System.out.println(Arrays.toString(camino.toArray()));
 			
+			System.out.println("\npasos : " + (camino.size()-1));
 			
+			long estimatedTimeBfs = System.nanoTime() - startBfs;
 			
+			/****
+			 * fin cálculo temporal algoritmo BFS
+			 */
 			
+			double timeBfs = estimatedTimeBfs / Math.pow(10, 9);
+			
+			double timeImplementacion = estimatedTimeImplementacion / Math.pow(10, 9);
+					
+			System.out.println();
+			System.out.println("Tiempo implementacion Grafo : " + timeImplementacion + " segundos");
+			System.out.println();
+			System.out.println("Tiempo implementacion BFS : " + timeBfs + " segundos");
+						
 		} catch (IOException e) {
 			e.printStackTrace();
 			
 		}
 		
 	}
-	
-	
-	
-	
 	
 }

@@ -54,16 +54,13 @@ public class BreadthFirstSearch {
 		while(!paths.isEmpty()) {
 			
 			path = paths.dequeue();
-		
-			
+				
 			if(!visited(path.getLastPath())) {
 				
 				if(path.getLastPath()==destinationNode) {
 					shortestPath = path.getPath();
-					return shortestPath;
-					
-				}else {
-					
+					return shortestPath;					
+				}else {				
 					Set <Integer> neighbors = graph.getNode(path.getLastPath()).getConexiones().keySet();
 					
 					for (Integer integer : neighbors) {
@@ -76,15 +73,12 @@ public class BreadthFirstSearch {
 							tempNode.add(integer);
 
 							newNode.setPath((Vector<Integer>) tempNode);
-							System.out.println(Arrays.toString(newNode.getPath().toArray()));
+							//System.out.println(Arrays.toString(newNode.getPath().toArray()));
 							paths.enqueue(newNode);
-							newNode = null;
-							
-						}
-						
+							newNode = null;							
+						}				
 					}
-					
-				
+								
 				}
 				this.addsPath(path.getLastPath());
 			}
@@ -93,8 +87,4 @@ public class BreadthFirstSearch {
 		
 		return shortestPath;
 	}
-	
-	
-	
-
 }

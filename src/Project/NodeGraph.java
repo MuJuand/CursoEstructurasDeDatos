@@ -48,6 +48,5 @@ public class NodeGraph {
 	public void setData(int data) {
 		this.data = data;
 	}
-	
-	
+		
 }
