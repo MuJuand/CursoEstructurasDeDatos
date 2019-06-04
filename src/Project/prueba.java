@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.StringTokenizer;
 
@@ -33,7 +34,7 @@ public class prueba {
 			int count = 0;
 			
 			/*
-			 * creacion de nodos
+			 * creacion de nodos y conexiones
 			 */
 			while(line !=null ) {
 				
@@ -49,14 +50,12 @@ public class prueba {
 				count++;
 			}
 			
-			Set <Integer> lista = graph.getNode(0).getConexiones().keySet();
 			
-			System.out.println(Arrays.toString(lista.toArray()));
+			BreadthFirstSearch bfs = new BreadthFirstSearch(graph);
 			
-			for (Integer integer : lista) {
-				System.out.println(integer);
-			}
+			List <Integer> camino = bfs.shortestPath(0, 1);
 			
+			System.out.println(Arrays.toString(camino.toArray()));
 			
 			
 			
@@ -67,5 +66,9 @@ public class prueba {
 		}
 		
 	}
+	
+	
+	
+	
 	
 }

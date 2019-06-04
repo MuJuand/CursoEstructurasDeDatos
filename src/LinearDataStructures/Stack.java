@@ -36,7 +36,7 @@ public class Stack {
 
 
 	/**
-	 * Add node at last stack
+	 * Add node at start stack
 	 * @param newNode
 	 */
 	public void push(Node newNode)
