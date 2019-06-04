@@ -67,6 +67,7 @@ public class BreadthFirstSearch {
 							tempNode.add(integer);
 
 							newNode.setPath((Vector<Integer>) tempNode);
+							System.out.println(Arrays.toString(newNode.getPath().toArray()));
 							paths.enqueue(newNode);
 							newNode = null;
 							
