@@ -48,9 +48,4 @@ public class NodePath {
 		this.next = next;
 	}
 	
-	
-	
-	
-	
-
 }

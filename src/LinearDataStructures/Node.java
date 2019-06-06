@@ -1,5 +1,7 @@
 package LinearDataStructures;
 
+import ProjectMujuand.NodeGraph;
+
 /*
 # Interface of a Generic Node.
 #
@@ -62,4 +64,7 @@ public interface Node {
 	 * @return
 	 */
 	public boolean isLessThan(Node node);
+
+
+	
 }

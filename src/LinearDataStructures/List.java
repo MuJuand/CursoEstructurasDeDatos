@@ -129,7 +129,6 @@ public class List {
 		System.gc();
 	}
 
-
 	/**
 	 * This method delete the present Node at a specific index of the list
 	 * @param index
@@ -281,6 +280,34 @@ public class List {
 			}
 		}
 		return index;
+	}
+	
+	public Node binarySearchNode(Node node)
+	{
+		int lower_bo = 1, uper_bo = this.length()-1;
+		int middle = 0;
+		
+		Node temp = null;
+
+		while(uper_bo > lower_bo) {
+			
+			middle = (lower_bo + uper_bo)/2;
+		
+			Node mid = get(middle);
+			
+			if(mid.equals(node)) {
+				temp = mid;
+				break;
+			}else {
+				temp = get(middle+1);
+				if(temp.isLessThan(node)) {
+					lower_bo = middle +1;
+				}else {
+					uper_bo = middle-1;
+				}
+			}
+		}
+		return temp;
 	}
 
 	/**
